@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "PrecixRetrofit")(type "KiCad")(uri "${KIPRJMOD}/PrecixRetrofit.kicad_sym")(options "")(descr ""))
+)
