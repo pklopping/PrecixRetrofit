@@ -246,7 +246,10 @@
   },
   "libraries": {
     "pinned_footprint_libs": [],
-    "pinned_symbol_libs": []
+    "pinned_symbol_libs": [
+      "PrecixRetrofit",
+      "PhoenixContact"
+    ]
   },
   "meta": {
     "filename": "Precix Retrofit.kicad_pro",
