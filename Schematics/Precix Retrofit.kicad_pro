@@ -248,7 +248,8 @@
     "pinned_footprint_libs": [],
     "pinned_symbol_libs": [
       "PrecixRetrofit",
-      "PhoenixContact"
+      "PhoenixContact",
+      "Beckhoff"
     ]
   },
   "meta": {

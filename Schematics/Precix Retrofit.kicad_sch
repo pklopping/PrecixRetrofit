@@ -5,6 +5,405 @@
 	(uuid "ee3600b8-1f41-490a-8d11-02ed54c7f3d5")
 	(paper "B")
 	(lib_symbols
+		(symbol "Beckhoff:EL1018"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at 0 6.604 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Beckhoff:EL7342"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at 5.08 12.7 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "EL7342"
+				(at 24.384 -13.208 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.beckhoff.com/en-us/products/i-o/ethercat-terminals/el-elm7xxx-compact-drive-technology/el7342.html"
+				(at -0.254 -41.148 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "EL7342 | EtherCAT Terminal, 2-channel motion interface, DC motor, 48 V DC, 3.5 A"
+				(at -0.254 -43.688 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "EL7342_1_1"
+				(rectangle
+					(start 0 11.43)
+					(end 20.32 -31.75)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin input line
+					(at -2.54 8.89 0)
+					(length 2.54)
+					(name "Encoder_A:_A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -2.54 6.35 0)
+					(length 2.54)
+					(name "Encoder_B:_A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at -2.54 3.81 0)
+					(length 2.54)
+					(name "Sensor_Supply_24V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -2.54 1.27 0)
+					(length 2.54)
+					(name "Input_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -2.54 -1.27 0)
+					(length 2.54)
+					(name "Encoder_A:_B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -2.54 -3.81 0)
+					(length 2.54)
+					(name "Encoder_B:_B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at -2.54 -6.35 0)
+					(length 2.54)
+					(name "Sensor_Supply_0V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -2.54 -8.89 0)
+					(length 2.54)
+					(name "Input_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -2.54 -11.43 0)
+					(length 2.54)
+					(name "Motor_A:_A1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1`"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -2.54 -13.97 0)
+					(length 2.54)
+					(name "Motor_B:_B1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2`"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at -2.54 -16.51 0)
+					(length 2.54)
+					(name "Sensor_Supply_24V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3`"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -2.54 -19.05 0)
+					(length 2.54)
+					(name "Load_Voltage_48V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -2.54 -21.59 0)
+					(length 2.54)
+					(name "Motor_A:_A2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5`"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -2.54 -24.13 0)
+					(length 2.54)
+					(name "Motor_B:_B2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6`"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at -2.54 -26.67 0)
+					(length 2.54)
+					(name "Sensor_Supply_0V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7`"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -2.54 -29.21 0)
+					(length 2.54)
+					(name "Load_Voltage_0V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8`"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Connector:Conn_01x04_Socket"
 			(pin_names
 				(offset 1.016)
@@ -3250,6 +3649,912 @@
 						)
 					)
 					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "EL1018_1"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at 5.08 12.7 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "EL1018"
+				(at 5.334 -12.7 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.beckhoff.com/en-us/products/i-o/ethercat-terminals/el1xxx-digital-input/el1018.html"
+				(at 1.016 -13.716 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "8-channel digital input"
+				(at 4.318 -16.764 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "EL1018_1_1_1"
+				(rectangle
+					(start 0 11.43)
+					(end 10.16 -11.43)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin input line
+					(at -2.54 8.89 0)
+					(length 2.54)
+					(name "Input_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -2.54 6.35 0)
+					(length 2.54)
+					(name "Input_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -2.54 3.81 0)
+					(length 2.54)
+					(name "Input_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -2.54 1.27 0)
+					(length 2.54)
+					(name "Input_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -2.54 -1.27 0)
+					(length 2.54)
+					(name "Input_5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -2.54 -3.81 0)
+					(length 2.54)
+					(name "Input_6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -2.54 -6.35 0)
+					(length 2.54)
+					(name "Input_7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -2.54 -8.89 0)
+					(length 2.54)
+					(name "Input_8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "EL7342_1"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at 5.08 12.7 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "EL7342"
+				(at 24.384 -13.208 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.beckhoff.com/en-us/products/i-o/ethercat-terminals/el-elm7xxx-compact-drive-technology/el7342.html"
+				(at -0.254 -41.148 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "EL7342 | EtherCAT Terminal, 2-channel motion interface, DC motor, 48 V DC, 3.5 A"
+				(at -0.254 -43.688 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "EL7342_1_1_1"
+				(rectangle
+					(start 0 11.43)
+					(end 20.32 -31.75)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin input line
+					(at -2.54 8.89 0)
+					(length 2.54)
+					(name "Encoder_A:_A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -2.54 6.35 0)
+					(length 2.54)
+					(name "Encoder_B:_A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at -2.54 3.81 0)
+					(length 2.54)
+					(name "Sensor_Supply_24V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -2.54 1.27 0)
+					(length 2.54)
+					(name "Input_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -2.54 -1.27 0)
+					(length 2.54)
+					(name "Encoder_A:_B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -2.54 -3.81 0)
+					(length 2.54)
+					(name "Encoder_B:_B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at -2.54 -6.35 0)
+					(length 2.54)
+					(name "Sensor_Supply_0V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -2.54 -8.89 0)
+					(length 2.54)
+					(name "Input_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -2.54 -11.43 0)
+					(length 2.54)
+					(name "Motor_A:_A1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1`"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -2.54 -13.97 0)
+					(length 2.54)
+					(name "Motor_B:_B1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2`"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at -2.54 -16.51 0)
+					(length 2.54)
+					(name "Sensor_Supply_24V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3`"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -2.54 -19.05 0)
+					(length 2.54)
+					(name "Load_Voltage_48V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -2.54 -21.59 0)
+					(length 2.54)
+					(name "Motor_A:_A2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5`"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -2.54 -24.13 0)
+					(length 2.54)
+					(name "Motor_B:_B2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6`"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at -2.54 -26.67 0)
+					(length 2.54)
+					(name "Sensor_Supply_0V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7`"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -2.54 -29.21 0)
+					(length 2.54)
+					(name "Load_Voltage_0V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8`"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "EL7342_2"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at 5.08 12.7 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "EL7342"
+				(at 24.384 -13.208 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.beckhoff.com/en-us/products/i-o/ethercat-terminals/el-elm7xxx-compact-drive-technology/el7342.html"
+				(at -0.254 -41.148 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "EL7342 | EtherCAT Terminal, 2-channel motion interface, DC motor, 48 V DC, 3.5 A"
+				(at -0.254 -43.688 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "EL7342_2_1_1"
+				(rectangle
+					(start 0 11.43)
+					(end 20.32 -31.75)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin input line
+					(at -2.54 8.89 0)
+					(length 2.54)
+					(name "Encoder_A:_A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -2.54 6.35 0)
+					(length 2.54)
+					(name "Encoder_B:_A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at -2.54 3.81 0)
+					(length 2.54)
+					(name "Sensor_Supply_24V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -2.54 1.27 0)
+					(length 2.54)
+					(name "Input_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -2.54 -1.27 0)
+					(length 2.54)
+					(name "Encoder_A:_B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -2.54 -3.81 0)
+					(length 2.54)
+					(name "Encoder_B:_B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at -2.54 -6.35 0)
+					(length 2.54)
+					(name "Sensor_Supply_0V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -2.54 -8.89 0)
+					(length 2.54)
+					(name "Input_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -2.54 -11.43 0)
+					(length 2.54)
+					(name "Motor_A:_A1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1`"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -2.54 -13.97 0)
+					(length 2.54)
+					(name "Motor_B:_B1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2`"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at -2.54 -16.51 0)
+					(length 2.54)
+					(name "Sensor_Supply_24V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3`"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -2.54 -19.05 0)
+					(length 2.54)
+					(name "Load_Voltage_48V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -2.54 -21.59 0)
+					(length 2.54)
+					(name "Motor_A:_A2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5`"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -2.54 -24.13 0)
+					(length 2.54)
+					(name "Motor_B:_B2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6`"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at -2.54 -26.67 0)
+					(length 2.54)
+					(name "Sensor_Supply_0V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7`"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -2.54 -29.21 0)
+					(length 2.54)
+					(name "Load_Voltage_0V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8`"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -8394,6 +9699,118 @@
 		)
 	)
 	(symbol
+		(lib_name "EL7342_2")
+		(lib_id "Beckhoff:EL7342")
+		(at 222.25 182.88 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "80297cfc-56bc-44f5-bd1f-49c0c8c022f9")
+		(property "Reference" "U5"
+			(at 212.09 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "EL7342"
+			(at 212.09 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 222.25 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.beckhoff.com/en-us/products/i-o/ethercat-terminals/el-elm7xxx-compact-drive-technology/el7342.html"
+			(at 222.504 224.028 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "EL7342 | EtherCAT Terminal, 2-channel motion interface, DC motor, 48 V DC, 3.5 A"
+			(at 222.504 226.568 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "f85e9ebc-3b64-4e9f-8924-f6d5fe1f0da6")
+		)
+		(pin "4"
+			(uuid "690fbeb5-926f-41b7-a624-de4ffd67d7cf")
+		)
+		(pin "5"
+			(uuid "ac84727b-f968-48c9-92ab-416a7950f790")
+		)
+		(pin "5`"
+			(uuid "7d3a74c9-f693-408d-9214-73c1a6a1c6f1")
+		)
+		(pin "6"
+			(uuid "b7408102-8c15-457b-95c6-3e0038aacc46")
+		)
+		(pin "2"
+			(uuid "20278755-2a78-4dc8-b072-625467c37166")
+		)
+		(pin "2`"
+			(uuid "0a694f91-f734-48df-acba-c076e531b1b8")
+		)
+		(pin "3"
+			(uuid "8a51ef97-11b8-42d9-9cd7-f9ae0efcf87a")
+		)
+		(pin "3`"
+			(uuid "3e25710d-0fcd-489f-8896-672a6fb9f873")
+		)
+		(pin "1"
+			(uuid "27dc15d5-1ba1-43f0-a4ac-626b2706c274")
+		)
+		(pin "1`"
+			(uuid "12644331-cf5b-4741-8e76-5a722c8feae7")
+		)
+		(pin "6`"
+			(uuid "a52b9a02-fc16-4110-a899-0c95999890eb")
+		)
+		(pin "7"
+			(uuid "81051fe7-1967-4036-b462-a8e5d5420647")
+		)
+		(pin "7`"
+			(uuid "9aa8beda-f766-455e-b02d-e94ee5b06a7d")
+		)
+		(pin "8"
+			(uuid "395b89a6-d710-4047-ae0d-ae2016f37271")
+		)
+		(pin "8`"
+			(uuid "3a840c40-79f2-4104-9dc9-48f13cd1d932")
+		)
+		(instances
+			(project "Precix Retrofit"
+				(path "/ee3600b8-1f41-490a-8d11-02ed54c7f3d5"
+					(reference "U5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:DA15_Socket")
 		(at 392.43 213.36 270)
 		(unit 1)
@@ -8572,6 +9989,293 @@
 			(project ""
 				(path "/ee3600b8-1f41-490a-8d11-02ed54c7f3d5"
 					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Beckhoff:EL7342")
+		(at 222.25 86.36 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a9054389-a9d8-4610-9bad-e12e9740a6d7")
+		(property "Reference" "U3"
+			(at 212.09 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "EL7342"
+			(at 212.09 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 222.25 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.beckhoff.com/en-us/products/i-o/ethercat-terminals/el-elm7xxx-compact-drive-technology/el7342.html"
+			(at 222.504 127.508 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "EL7342 | EtherCAT Terminal, 2-channel motion interface, DC motor, 48 V DC, 3.5 A"
+			(at 222.504 130.048 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "3f5a202b-63e1-410b-861b-0489ac2621f7")
+		)
+		(pin "4"
+			(uuid "3c47b5c0-365e-44b6-b21e-6e2f350388ae")
+		)
+		(pin "5"
+			(uuid "59f4d306-6319-42ba-9fa9-1bbda7cc86c7")
+		)
+		(pin "5`"
+			(uuid "69cedf4e-f7b2-4652-a94f-dd0860a0874f")
+		)
+		(pin "6"
+			(uuid "5a5517c3-b2cf-4a62-b3db-cfe6acf721e7")
+		)
+		(pin "2"
+			(uuid "c6ac8f8a-a0c6-4366-a816-ee1c607cc7bd")
+		)
+		(pin "2`"
+			(uuid "c2c66bcb-144e-4c36-9db3-fe2fcb74916a")
+		)
+		(pin "3"
+			(uuid "aa3d00e0-d295-423d-9c95-233b2f0272e3")
+		)
+		(pin "3`"
+			(uuid "805920c9-eb02-43e7-a681-c80eada30430")
+		)
+		(pin "1"
+			(uuid "b56be0c0-937d-4bbc-9520-7ac5f79b04ae")
+		)
+		(pin "1`"
+			(uuid "411474f7-75eb-4436-9c58-2bf167a7e7b4")
+		)
+		(pin "6`"
+			(uuid "1d586bfd-7f79-474f-bcbc-4486f3183465")
+		)
+		(pin "7"
+			(uuid "62e0c907-97f5-4841-b649-4e58ad433931")
+		)
+		(pin "7`"
+			(uuid "6ab1b832-ec84-4916-b426-0373ec127806")
+		)
+		(pin "8"
+			(uuid "5ca9415d-4a84-428c-b795-dfa1e45ce613")
+		)
+		(pin "8`"
+			(uuid "2980b17f-63c6-49b0-9be4-9cd2bde0475c")
+		)
+		(instances
+			(project ""
+				(path "/ee3600b8-1f41-490a-8d11-02ed54c7f3d5"
+					(reference "U3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Beckhoff:EL1018")
+		(at 212.09 127 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b3a70176-98f0-4db3-9012-295d58b98b25")
+		(property "Reference" "U1"
+			(at 213.36 126.3649 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "~"
+			(at 213.36 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 212.09 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 212.09 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 212.09 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project ""
+				(path "/ee3600b8-1f41-490a-8d11-02ed54c7f3d5"
+					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "EL7342_1")
+		(lib_id "Beckhoff:EL7342")
+		(at 222.25 133.35 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bc085807-f8bf-40f6-841e-ac806f8f24d8")
+		(property "Reference" "U4"
+			(at 212.09 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "EL7342"
+			(at 212.09 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 222.25 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.beckhoff.com/en-us/products/i-o/ethercat-terminals/el-elm7xxx-compact-drive-technology/el7342.html"
+			(at 222.504 174.498 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "EL7342 | EtherCAT Terminal, 2-channel motion interface, DC motor, 48 V DC, 3.5 A"
+			(at 222.504 177.038 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "761a15ee-623f-4050-a6e9-6f2e685efff9")
+		)
+		(pin "4"
+			(uuid "b085dc4a-eda4-4e0f-965a-fa4332ee196e")
+		)
+		(pin "5"
+			(uuid "ff348c26-82c9-4ae4-9da8-c37f85e8d1b6")
+		)
+		(pin "5`"
+			(uuid "6ecd2036-7366-4e9a-a5ab-727ee4bdf8c1")
+		)
+		(pin "6"
+			(uuid "a6da4a56-e509-4aa7-abdc-f6bd0314c2be")
+		)
+		(pin "2"
+			(uuid "3002a3a0-bef1-4952-9f33-5b3ee8d6474f")
+		)
+		(pin "2`"
+			(uuid "05c7ca71-0582-448c-8e46-000950b07ae4")
+		)
+		(pin "3"
+			(uuid "f2f3f4ec-3d9c-41d3-8da5-fd5bff8d4949")
+		)
+		(pin "3`"
+			(uuid "682cdea1-f353-4c2e-8ea7-7cc5000626e4")
+		)
+		(pin "1"
+			(uuid "49b8fc8f-03d2-45b3-8a08-977af17da8cd")
+		)
+		(pin "1`"
+			(uuid "15da2ed7-e801-4f09-9b49-1eb54d21ee5e")
+		)
+		(pin "6`"
+			(uuid "0e67e477-64c0-4795-a9c7-ae73f05b9438")
+		)
+		(pin "7"
+			(uuid "2f8d0c4e-8cf5-4c10-826f-43fcbdbdbed0")
+		)
+		(pin "7`"
+			(uuid "0c601d92-9897-4720-ac1d-9a5b8716ee6c")
+		)
+		(pin "8"
+			(uuid "228f3f48-e37e-413e-8159-62706dcfa253")
+		)
+		(pin "8`"
+			(uuid "5ca19d8c-9285-4dd2-a3af-9621afac38b2")
+		)
+		(instances
+			(project "Precix Retrofit"
+				(path "/ee3600b8-1f41-490a-8d11-02ed54c7f3d5"
+					(reference "U4")
 					(unit 1)
 				)
 			)
@@ -9032,6 +10736,95 @@
 			(project ""
 				(path "/ee3600b8-1f41-490a-8d11-02ed54c7f3d5"
 					(reference "J10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "EL1018_1")
+		(lib_id "Beckhoff:EL1018")
+		(at 222.25 60.96 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f05c6478-ed89-471c-a6ec-d1ffcabe6226")
+		(property "Reference" "U2"
+			(at 210.82 59.6899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "EL1018"
+			(at 210.82 62.2299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 222.25 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.beckhoff.com/en-us/products/i-o/ethercat-terminals/el1xxx-digital-input/el1018.html"
+			(at 221.234 74.676 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "8-channel digital input"
+			(at 217.932 77.724 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "ce517da2-cbd6-4007-afcd-1181002b9f68")
+		)
+		(pin "2"
+			(uuid "7a246c02-814d-4a34-b380-d9eaaa264304")
+		)
+		(pin "7"
+			(uuid "d31bd469-a006-4b5c-b942-2cf9634eb216")
+		)
+		(pin "5"
+			(uuid "86e6d68e-6f0b-4559-8890-15b86ef94e90")
+		)
+		(pin "6"
+			(uuid "a463c289-1885-410a-8a1c-4e99152e74b1")
+		)
+		(pin "8"
+			(uuid "b4af8c3b-3f89-4cb0-8152-8e30d11645cd")
+		)
+		(pin "4"
+			(uuid "547100db-1599-4df9-acdc-a5e5c1342939")
+		)
+		(pin "1"
+			(uuid "f3ccac76-b0ab-49fb-856b-89d64c574cea")
+		)
+		(instances
+			(project ""
+				(path "/ee3600b8-1f41-490a-8d11-02ed54c7f3d5"
+					(reference "U2")
 					(unit 1)
 				)
 			)
