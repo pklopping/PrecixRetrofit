@@ -876,7 +876,7 @@
 		(symbol "EL5101_1_1"
 			(rectangle
 				(start 0 11.43)
-				(end 20.32 -31.75)
+				(end 9.525 -31.75)
 				(stroke
 					(width 0)
 					(type solid)
