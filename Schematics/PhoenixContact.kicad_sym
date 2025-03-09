@@ -535,17 +535,6 @@
 			)
 		)
 		(symbol "FBS 2-5_BU_3036877_0_1"
-			(rectangle
-				(start 1.905 1.905)
-				(end 3.175 -0.635)
-				(stroke
-					(width 0.1524)
-					(type default)
-				)
-				(fill
-					(type background)
-				)
-			)
 			(polyline
 				(pts
 					(xy 2.54 1.27) (xy 2.54 0)
@@ -582,6 +571,18 @@
 			)
 		)
 		(symbol "FBS 2-5_BU_3036877_1_1"
+			(rectangle
+				(start 1.905 1.905)
+				(end 3.175 -0.635)
+				(stroke
+					(width 0.1524)
+					(type solid)
+				)
+				(fill
+					(type color)
+					(color 184 213 255 1)
+				)
+			)
 			(pin bidirectional line
 				(at 0 1.27 0)
 				(length 2.54)
@@ -890,17 +891,6 @@
 			)
 		)
 		(symbol "FBS 5-10 BU 1040620_0_1"
-			(rectangle
-				(start 1.905 1.905)
-				(end 3.175 -4.445)
-				(stroke
-					(width 0.1524)
-					(type default)
-				)
-				(fill
-					(type background)
-				)
-			)
 			(polyline
 				(pts
 					(xy 2.54 1.27) (xy 2.54 -3.81)
@@ -970,6 +960,18 @@
 			)
 		)
 		(symbol "FBS 5-10 BU 1040620_1_1"
+			(rectangle
+				(start 1.905 1.905)
+				(end 3.175 -4.445)
+				(stroke
+					(width 0.1524)
+					(type solid)
+				)
+				(fill
+					(type color)
+					(color 185 214 255 1)
+				)
+			)
 			(pin bidirectional line
 				(at 0 1.27 0)
 				(length 2.54)
@@ -1111,17 +1113,6 @@
 			)
 		)
 		(symbol "FBS_10-5 BU_3036916_0_1"
-			(rectangle
-				(start 1.905 3.175)
-				(end 3.175 -9.525)
-				(stroke
-					(width 0.1524)
-					(type default)
-				)
-				(fill
-					(type background)
-				)
-			)
 			(polyline
 				(pts
 					(xy 2.54 2.54) (xy 2.54 -8.89)
@@ -1246,6 +1237,18 @@
 			)
 		)
 		(symbol "FBS_10-5 BU_3036916_1_1"
+			(rectangle
+				(start 1.905 3.175)
+				(end 3.175 -9.525)
+				(stroke
+					(width 0.1524)
+					(type solid)
+				)
+				(fill
+					(type color)
+					(color 185 214 255 1)
+				)
+			)
 			(pin bidirectional line
 				(at 0 2.54 0)
 				(length 2.54)
@@ -2006,17 +2009,6 @@
 			)
 		)
 		(symbol "FBS_3-5_BU-3036880_0_1"
-			(rectangle
-				(start 1.905 1.905)
-				(end 3.175 -1.905)
-				(stroke
-					(width 0.1524)
-					(type default)
-				)
-				(fill
-					(type background)
-				)
-			)
 			(polyline
 				(pts
 					(xy 2.54 1.27) (xy 2.54 -1.27)
@@ -2064,6 +2056,18 @@
 			)
 		)
 		(symbol "FBS_3-5_BU-3036880_1_1"
+			(rectangle
+				(start 1.905 1.905)
+				(end 3.175 -1.905)
+				(stroke
+					(width 0.1524)
+					(type solid)
+				)
+				(fill
+					(type color)
+					(color 185 214 255 1)
+				)
+			)
 			(pin bidirectional line
 				(at 0 1.27 0)
 				(length 2.54)
@@ -2361,17 +2365,6 @@
 			)
 		)
 		(symbol "FBS_4-5_BU_0_1"
-			(rectangle
-				(start 1.905 3.175)
-				(end 3.175 -1.905)
-				(stroke
-					(width 0.1524)
-					(type default)
-				)
-				(fill
-					(type background)
-				)
-			)
 			(polyline
 				(pts
 					(xy 2.54 2.54) (xy 2.54 -1.27)
@@ -2430,6 +2423,18 @@
 			)
 		)
 		(symbol "FBS_4-5_BU_1_1"
+			(rectangle
+				(start 1.905 3.175)
+				(end 3.175 -1.905)
+				(stroke
+					(width 0.1524)
+					(type solid)
+				)
+				(fill
+					(type color)
+					(color 185 214 255 1)
+				)
+			)
 			(pin bidirectional line
 				(at 0 2.54 0)
 				(length 2.54)
@@ -2774,17 +2779,6 @@
 			)
 		)
 		(symbol "FBS_5-5_BU_3030190_0_1"
-			(rectangle
-				(start 1.905 3.175)
-				(end 3.175 -3.175)
-				(stroke
-					(width 0.1524)
-					(type default)
-				)
-				(fill
-					(type background)
-				)
-			)
 			(polyline
 				(pts
 					(xy 2.54 2.54) (xy 2.54 -2.54)
@@ -2854,6 +2848,18 @@
 			)
 		)
 		(symbol "FBS_5-5_BU_3030190_1_1"
+			(rectangle
+				(start 1.905 3.175)
+				(end 3.175 -3.175)
+				(stroke
+					(width 0.1524)
+					(type solid)
+				)
+				(fill
+					(type color)
+					(color 185 214 255 1)
+				)
+			)
 			(pin bidirectional line
 				(at 0 2.54 0)
 				(length 2.54)
@@ -3884,17 +3890,6 @@
 			)
 		)
 		(symbol "PT 2,5 YE 3209511_0_1"
-			(rectangle
-				(start -2.54 2.54)
-				(end 2.54 0)
-				(stroke
-					(width 0.1524)
-					(type default)
-				)
-				(fill
-					(type background)
-				)
-			)
 			(polyline
 				(pts
 					(xy 0 3.81) (xy 0 1.27)
@@ -3944,6 +3939,18 @@
 			)
 		)
 		(symbol "PT 2,5 YE 3209511_1_1"
+			(rectangle
+				(start -2.54 2.54)
+				(end 2.54 0)
+				(stroke
+					(width 0.1524)
+					(type solid)
+				)
+				(fill
+					(type color)
+					(color 255 243 90 1)
+				)
+			)
 			(pin bidirectional line
 				(at -5.08 1.27 0)
 				(length 2.54)
@@ -6308,17 +6315,6 @@
 			)
 		)
 		(symbol "PTTB_2,5-PE_3210596_0_1"
-			(rectangle
-				(start -2.54 2.54)
-				(end 2.54 -2.54)
-				(stroke
-					(width 0.1524)
-					(type default)
-				)
-				(fill
-					(type background)
-				)
-			)
 			(polyline
 				(pts
 					(xy -2.54 -1.27) (xy 2.54 -1.27)
@@ -6485,6 +6481,18 @@
 			)
 		)
 		(symbol "PTTB_2,5-PE_3210596_1_1"
+			(rectangle
+				(start -2.54 2.54)
+				(end 2.54 -2.54)
+				(stroke
+					(width 0.1524)
+					(type solid)
+				)
+				(fill
+					(type color)
+					(color 140 255 145 1)
+				)
+			)
 			(pin bidirectional line
 				(at -5.08 1.27 0)
 				(length 2.54)
