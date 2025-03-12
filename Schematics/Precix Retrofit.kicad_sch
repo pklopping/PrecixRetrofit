@@ -33882,15 +33882,6 @@
 				(hide yes)
 			)
 		)
-		(property "Backup" "https://www.mouser.com/ProductDetail/Phoenix-Contact/3210567?qs=0GwWoUZNbuVV%2FAKwmWEY1Q%3D%3D"
-			(at 140.97 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin ""
 			(uuid "5b776291-1adb-4bb3-a1e5-56465241ad81")
 		)
