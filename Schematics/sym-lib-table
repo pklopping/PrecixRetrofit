@@ -3,4 +3,5 @@
   (lib (name "PrecixRetrofit")(type "KiCad")(uri "${KIPRJMOD}/PrecixRetrofit.kicad_sym")(options "")(descr ""))
   (lib (name "PhoenixContact")(type "KiCad")(uri "${KIPRJMOD}/PhoenixContact.kicad_sym")(options "")(descr ""))
   (lib (name "Beckhoff")(type "KiCad")(uri "${KIPRJMOD}/Beckhoff.kicad_sym")(options "")(descr ""))
+  (lib (name "Omron")(type "KiCad")(uri "${KIPRJMOD}/Omron.kicad_sym")(options "")(descr ""))
 )

@@ -249,7 +249,8 @@
     "pinned_symbol_libs": [
       "PrecixRetrofit",
       "PhoenixContact",
-      "Beckhoff"
+      "Beckhoff",
+      "Omron"
     ]
   },
   "meta": {
