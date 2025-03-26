@@ -250,7 +250,8 @@
       "PrecixRetrofit",
       "PhoenixContact",
       "Beckhoff",
-      "Omron"
+      "Omron",
+      "TE Connectivity"
     ]
   },
   "meta": {
@@ -380,6 +381,12 @@
           "group_by": false,
           "label": "#",
           "name": "${ITEM_NUMBER}",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Pin",
+          "name": "Sim.Pin",
           "show": false
         }
       ],
