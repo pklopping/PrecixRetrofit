@@ -21044,10 +21044,6 @@
 		(uuid "ceb411f7-05bb-4f65-8050-8b59d84ffd1c")
 	)
 	(no_connect
-		(at 110.49 207.01)
-		(uuid "cfd97115-bbed-4d2c-91da-f8e7217731d4")
-	)
-	(no_connect
 		(at 398.78 227.33)
 		(uuid "cff85075-b24e-468b-8cc5-ca6a4a47814e")
 	)
@@ -22669,6 +22665,16 @@
 	)
 	(wire
 		(pts
+			(xy 107.95 207.01) (xy 110.49 207.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "58a54cda-f8f7-4049-8037-7d1ed7f63aab")
+	)
+	(wire
+		(pts
 			(xy 57.15 80.01) (xy 67.31 80.01)
 		)
 		(stroke
@@ -23009,7 +23015,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 76.2) (xy 199.39 76.2)
+			(xy 196.85 76.2) (xy 199.39 76.2)
 		)
 		(stroke
 			(width 0)
@@ -23599,7 +23605,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 209.55) (xy 110.49 209.55)
+			(xy 107.95 209.55) (xy 110.49 209.55)
 		)
 		(stroke
 			(width 0)
@@ -24286,6 +24292,16 @@
 			(type default)
 		)
 		(uuid "c80a3dc3-4a57-4858-8e22-3a18e6bb48fb")
+	)
+	(wire
+		(pts
+			(xy 196.85 73.66) (xy 199.39 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c95f4b07-68fe-4581-ac26-6cc2ef5d9497")
 	)
 	(wire
 		(pts
@@ -26037,6 +26053,28 @@
 			)
 		)
 	)
+	(global_label "Fan 24V"
+		(shape input)
+		(at 107.95 207.01 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "38b720fe-9c74-420d-b2ba-4234f89e6297")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 97.103 207.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "Y-PSU PE"
 		(shape input)
 		(at 34.29 201.93 180)
@@ -26787,7 +26825,7 @@
 	)
 	(global_label "Fan 0V"
 		(shape input)
-		(at 198.12 76.2 180)
+		(at 196.85 76.2 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -26797,7 +26835,7 @@
 		)
 		(uuid "74031510-b164-477a-905c-eec7967f37ba")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 188.4825 76.2 0)
+			(at 187.2125 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27469,7 +27507,7 @@
 	)
 	(global_label "Fan 0V"
 		(shape input)
-		(at 109.22 209.55 180)
+		(at 107.95 209.55 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -27479,7 +27517,7 @@
 		)
 		(uuid "b1dc16b8-aafb-4db6-a56d-0c827292f8a2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 99.5825 209.55 0)
+			(at 98.3125 209.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -28162,6 +28200,28 @@
 		(uuid "fdfbc5cc-2425-4d16-96be-9dfe4be2bbab")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 257.365 254 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Fan 24V"
+		(shape input)
+		(at 196.85 73.66 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "ffceed32-4fb7-44fa-b522-aaa5056d0d73")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 186.003 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
