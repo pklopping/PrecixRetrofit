@@ -26503,6 +26503,16 @@
 		)
 		(uuid "1820b5db-1012-4ef0-98d1-bbd5adf64a5f")
 	)
+	(label "8"
+		(at 78.74 29.21 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1908bccd-a63f-48be-869b-afe22821f57e")
+	)
 	(label "120"
 		(at 375.92 180.34 0)
 		(effects
@@ -26622,16 +26632,6 @@
 			(justify left bottom)
 		)
 		(uuid "304ee151-5413-412d-ae8f-25d5dad8f430")
-	)
-	(label "7"
-		(at 78.74 29.21 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "30e48252-b8a3-43a6-9e06-a685bfcb6a6a")
 	)
 	(label "21"
 		(at 88.9 62.23 0)
@@ -27212,6 +27212,16 @@
 			(justify left bottom)
 		)
 		(uuid "85d1977a-f1b6-46c8-854f-a03abb8d9bd0")
+	)
+	(label "7"
+		(at 64.77 29.21 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "861684b4-effa-497a-8d81-1f8fdf77768e")
 	)
 	(label "4"
 		(at 55.88 29.21 0)
