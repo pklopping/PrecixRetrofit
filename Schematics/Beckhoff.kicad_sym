@@ -6,16 +6,16 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(property "Reference" "U"
-			(at 5.08 12.7 0)
+		(property "Reference" "EK1100-"
+			(at 3.556 14.224 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "ELK1100"
-			(at 5.334 -12.7 0)
+		(property "Value" "EK1100"
+			(at 3.556 12.446 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -212,7 +212,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(property "Reference" "U"
+		(property "Reference" "EL1018-"
 			(at 5.08 12.7 0)
 			(effects
 				(font
@@ -418,7 +418,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(property "Reference" "U"
+		(property "Reference" "EL1094-"
 			(at 5.08 12.7 0)
 			(effects
 				(font
@@ -624,7 +624,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(property "Reference" "U"
+		(property "Reference" "EL2008-"
 			(at 5.08 12.7 0)
 			(effects
 				(font
@@ -830,7 +830,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(property "Reference" "U"
+		(property "Reference" "EL2084-"
 			(at 5.08 12.7 0)
 			(effects
 				(font
@@ -1036,7 +1036,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(property "Reference" "U"
+		(property "Reference" "EL4002-"
 			(at 5.08 12.7 0)
 			(effects
 				(font
@@ -1242,7 +1242,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(property "Reference" "U"
+		(property "Reference" "EL5101-"
 			(at 5.08 12.7 0)
 			(effects
 				(font
@@ -1592,7 +1592,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(property "Reference" "U"
+		(property "Reference" "EL7342-"
 			(at 5.08 12.7 0)
 			(effects
 				(font
