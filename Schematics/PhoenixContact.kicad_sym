@@ -9075,7 +9075,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(property "Reference" "PS"
-			(at 0 6.35 0)
+			(at 0 8.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9083,7 +9083,7 @@
 			)
 		)
 		(property "Value" "UNO2-PS/1AC/48DC/240W"
-			(at 0 -11.684 0)
+			(at 0 -9.144 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9100,7 +9100,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.phoenixcontact.com/en-us/products/power-supply-uno2-ps1ac48dc240w-1110155"
-			(at 0 -16.002 0)
+			(at 0 -13.462 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9109,7 +9109,7 @@
 			)
 		)
 		(property "Description" "UNO2-PS/1AC/48DC/240W - Power supply unit"
-			(at 0 -13.716 0)
+			(at 0 -11.176 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9137,8 +9137,8 @@
 		)
 		(symbol "UNO2-PS/1AC/48DC/240W_0_1"
 			(rectangle
-				(start -8.89 5.08)
-				(end 7.62 -10.16)
+				(start -8.89 7.62)
+				(end 7.62 -7.62)
 				(stroke
 					(width 0.254)
 					(type default)
@@ -9149,7 +9149,7 @@
 			)
 			(polyline
 				(pts
-					(xy -6.604 -0.635) (xy -4.064 -0.635)
+					(xy -6.604 1.905) (xy -4.064 1.905)
 				)
 				(stroke
 					(width 0)
@@ -9160,9 +9160,9 @@
 				)
 			)
 			(arc
-				(start -5.334 0.635)
-				(mid -5.969 0.2495)
-				(end -6.604 0.635)
+				(start -5.334 3.175)
+				(mid -5.969 2.7895)
+				(end -6.604 3.175)
 				(stroke
 					(width 0)
 					(type default)
@@ -9172,9 +9172,21 @@
 				)
 			)
 			(arc
-				(start -5.334 0.635)
-				(mid -4.699 1.0072)
-				(end -4.064 0.635)
+				(start -5.334 3.175)
+				(mid -4.699 3.5472)
+				(end -4.064 3.175)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 7.62) (xy 0 6.35)
+				)
 				(stroke
 					(width 0)
 					(type default)
@@ -9245,7 +9257,7 @@
 			)
 			(polyline
 				(pts
-					(xy 0 -7.62) (xy 0 -8.89)
+					(xy 1.905 0) (xy 0.635 0)
 				)
 				(stroke
 					(width 0)
@@ -9257,7 +9269,7 @@
 			)
 			(polyline
 				(pts
-					(xy 2.794 -1.905) (xy 3.302 -1.905)
+					(xy 2.794 3.81) (xy 3.302 3.81)
 				)
 				(stroke
 					(width 0)
@@ -9269,7 +9281,7 @@
 			)
 			(polyline
 				(pts
-					(xy 2.794 -3.175) (xy 5.334 -3.175)
+					(xy 2.794 3.175) (xy 5.334 3.175)
 				)
 				(stroke
 					(width 0)
@@ -9281,7 +9293,7 @@
 			)
 			(polyline
 				(pts
-					(xy 3.81 -1.905) (xy 4.318 -1.905)
+					(xy 3.81 3.81) (xy 4.318 3.81)
 				)
 				(stroke
 					(width 0)
@@ -9293,7 +9305,91 @@
 			)
 			(polyline
 				(pts
-					(xy 4.826 -1.905) (xy 5.334 -1.905)
+					(xy 4.445 0) (xy 3.175 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 4.445 -2.54) (xy 4.445 -3.175)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 4.445 -3.175) (xy 3.175 -5.715)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 4.445 -6.35) (xy 4.445 -5.715)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 4.826 3.81) (xy 5.334 3.81)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 6.985 0) (xy 5.715 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 7.62 -2.54) (xy 4.445 -2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 7.62 -6.35) (xy 4.445 -6.35)
 				)
 				(stroke
 					(width 0)
@@ -9305,9 +9401,17 @@
 			)
 		)
 		(symbol "UNO2-PS/1AC/48DC/240W_1_1"
+			(text "OK"
+				(at 5.842 -4.572 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
 			(pin power_in line
-				(at -11.43 2.54 0)
-				(length 2.54)
+				(at -13.97 5.08 0)
+				(length 5.08)
 				(name "AC(L)"
 					(effects
 						(font
@@ -9315,7 +9419,7 @@
 						)
 					)
 				)
-				(number "1"
+				(number "1.2"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -9324,8 +9428,8 @@
 				)
 			)
 			(pin power_in line
-				(at -11.43 -2.54 0)
-				(length 2.54)
+				(at -13.97 0 0)
+				(length 5.08)
 				(name "AC(N)"
 					(effects
 						(font
@@ -9333,7 +9437,7 @@
 						)
 					)
 				)
-				(number "2"
+				(number "1.3"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -9342,8 +9446,8 @@
 				)
 			)
 			(pin power_in line
-				(at -11.43 -7.62 0)
-				(length 2.54)
+				(at -13.97 -5.08 0)
+				(length 5.08)
 				(name "AC(GND)"
 					(effects
 						(font
@@ -9351,7 +9455,7 @@
 						)
 					)
 				)
-				(number "3"
+				(number "1.1"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -9360,8 +9464,8 @@
 				)
 			)
 			(pin power_out line
-				(at 10.16 0 180)
-				(length 2.54)
+				(at 12.7 5.08 180)
+				(length 5.08)
 				(name "48V"
 					(effects
 						(font
@@ -9369,7 +9473,7 @@
 						)
 					)
 				)
-				(number "4"
+				(number "2.1"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -9378,8 +9482,8 @@
 				)
 			)
 			(pin power_out line
-				(at 10.16 -5.08 180)
-				(length 2.54)
+				(at 12.7 1.27 180)
+				(length 5.08)
 				(name "0V"
 					(effects
 						(font
@@ -9387,7 +9491,43 @@
 						)
 					)
 				)
-				(number "5"
+				(number "2.3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_out line
+				(at 12.7 -2.54 180)
+				(length 5.08)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3.1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_out line
+				(at 12.7 -6.35 180)
+				(length 5.08)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3.2"
 					(effects
 						(font
 							(size 1.27 1.27)
