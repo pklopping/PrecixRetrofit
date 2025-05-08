@@ -1,0 +1,10 @@
+loadusr -W lcec_conf precix.xml
+loadrt lcec
+
+loadrt threads name1=base-thread period1=100000 name2=servo-thread period2=1000000
+
+addf lcec.read-all base-thread
+addf lcec.write-all base-thread
+
+start
+
