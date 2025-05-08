@@ -147,8 +147,13 @@ net z-amp-fault <= lcec.0.z-axis-drive.srv-0-error
 net z-vel-cmd => lcec.0.z-axis-drive.srv-0-cmd
 net z-pos-lim-in <= lcec.0.z-axis-drive.srv-0-din1
 
+# Z axis encoder
 setp lcec.0.z-axis-encoder.enc-pos-scale [JOINT_2]ENC_SCALE
 net z-pos-fb <= lcec.0.z-axis-encoder.enc-pos
+
+# Z axis brake
+net z-brake-release <= lcec.0.z-axis-drive.srv-0-ready
+net z-brake-release => lcec.0.2.dout-2
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 # E-Stop
