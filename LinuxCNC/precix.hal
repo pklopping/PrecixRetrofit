@@ -151,4 +151,6 @@ net z-pos-fb <= lcec.0.z-axis-encoder.enc-pos
 # E-Stop
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 # Estop simulation connections
-net estop   iocontrol.0.emc-enable-in   iocontrol.0.user-enable-out
+net estop-ext	<= lcec.0.1.din-2
+net estop-out	<= iocontrol.0.user-enable-out
+net estop-ext	=> iocontrol.0.emc-enable-in
