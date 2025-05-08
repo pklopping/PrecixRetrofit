@@ -63,6 +63,7 @@ setp lcec.0.x-axis-drive.srv-0-scale [JOINT_0]SCALE
 net x-enable => lcec.0.x-axis-drive.srv-0-enable
 net x-amp-fault <= lcec.0.x-axis-drive.srv-0-error
 net x-vel-cmd => lcec.0.x-axis-drive.srv-0-cmd
+net x-neg-lim-in <= lcec.0.x-axis-drive.srv-0-din1
 
 setp lcec.0.x-axis-encoder.enc-pos-scale [JOINT_0]ENC_SCALE
 net x-pos-fb <= lcec.0.x-axis-encoder.enc-pos
@@ -103,6 +104,7 @@ setp lcec.0.y-axis-drive.srv-0-scale [JOINT_1]SCALE
 net y-enable => lcec.0.y-axis-drive.srv-0-enable
 net y-amp-fault <= lcec.0.y-axis-drive.srv-0-error
 net y-vel-cmd => lcec.0.y-axis-drive.srv-0-cmd
+net y-neg-lim-in <= lcec.0.y-axis-drive.srv-0-din1
 
 setp lcec.0.y-axis-encoder.enc-pos-scale [JOINT_1]ENC_SCALE
 net y-pos-fb <= lcec.0.y-axis-encoder.enc-pos
@@ -143,6 +145,7 @@ setp lcec.0.z-axis-drive.srv-0-scale [JOINT_2]SCALE
 net z-enable => lcec.0.z-axis-drive.srv-0-enable
 net z-amp-fault <= lcec.0.z-axis-drive.srv-0-error
 net z-vel-cmd => lcec.0.z-axis-drive.srv-0-cmd
+net z-pos-lim-in <= lcec.0.z-axis-drive.srv-0-din1
 
 setp lcec.0.z-axis-encoder.enc-pos-scale [JOINT_2]ENC_SCALE
 net z-pos-fb <= lcec.0.z-axis-encoder.enc-pos
