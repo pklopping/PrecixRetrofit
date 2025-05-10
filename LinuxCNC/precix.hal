@@ -162,3 +162,25 @@ net z-brake-release => lcec.0.2.dout-2
 net estop-ext	<= lcec.0.1.din-2
 net estop-out	<= iocontrol.0.user-enable-out
 net estop-ext	=> iocontrol.0.emc-enable-in
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Problem
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+loadrt logic names=problem_flags personality=0x206
+addf problem_flags servo-thread
+# X-Axis
+net x-axis-power-good <= lcec.0.10.din-2-not
+net x-axis-power-good => problem_flags.in-00
+net x-amp-fault => problem_flags.in-01
+# Y-Axis
+net y-axis-power-good <= lcec.0.10.din-1-not
+net y-axis-power-good => problem_flags.in-02
+net y-amp-fault => problem_flags.in-03
+# Z-Axis
+net z-axis-power-good <= lcec.0.10.din-3-not
+net z-axis-power-good => problem_flags.in-04
+net z-amp-fault => problem_flags.in-05
+# Problem Output
+net problem_out <= problem_flags.or
+net problem_out => lcec.0.2.dout-3
