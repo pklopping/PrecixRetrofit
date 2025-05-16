@@ -184,3 +184,18 @@ net z-amp-fault => problem_flags.in-05
 # Problem Output
 net problem_out <= problem_flags.or
 net problem_out => lcec.0.2.dout-3
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Spindle Control
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+loadrt scale count=1
+addf scale.0 servo-thread
+setp scale.0.gain 0.000055555555
+net spindle-speed-scale spindle.0.speed-out => scale.0.in
+net spindle-speed-DAC scale.0.out => lcec.0.9.aout-0-value
+net spindle-on halui.spindle.0.is-on => lcec.0.9.aout-0-enable
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Tool Changer fake-out?
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+net tool-prepare-loopback iocontrol.0.tool-prepare => iocontrol.0.tool-prepared
