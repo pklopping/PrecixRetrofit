@@ -27,7 +27,7 @@ fp-info-cache
 *.ses
 
 # Exported BOM files
-*.xml
+Schematics/*.xml
 *.csv
 
 .DS_Store
