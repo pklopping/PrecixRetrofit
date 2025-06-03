@@ -28,6 +28,11 @@ addf z-pid.do-pid-calcs servo-thread
 addf lcec.write-all servo-thread
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+# Nots for limit switches
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+loadrt not count=3
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 # X-Axis 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
@@ -35,7 +40,6 @@ addf lcec.write-all servo-thread
 setp x-pid.Pgain [JOINT_0]P
 setp x-pid.Igain [JOINT_0]I
 setp x-pid.Dgain [JOINT_0]D
-setp x-pid.FF0 [JOINT_0]FF0
 setp x-pid.FF1 [JOINT_0]FF1
 setp x-pid.FF2 [JOINT_0]FF2
 setp x-pid.deadband [JOINT_0]DEADBAND
@@ -63,10 +67,14 @@ setp lcec.0.x-axis-drive.srv-0-scale [JOINT_0]SCALE
 net x-enable => lcec.0.x-axis-drive.srv-0-enable
 net x-amp-fault <= lcec.0.x-axis-drive.srv-0-error
 net x-vel-cmd => lcec.0.x-axis-drive.srv-0-cmd
-net x-neg-lim-in <= lcec.0.x-axis-drive.srv-0-din1
 
-setp lcec.0.x-axis-encoder.enc-pos-scale [JOINT_0]ENC_SCALE
-net x-pos-fb <= lcec.0.x-axis-encoder.enc-pos
+addf not.0 servo-thread
+net x-limit-raw <= lcec.0.x-axis-drive.srv-0-din1
+net x-limit-raw => not.0.in
+net x-neg-lim-in <= not.0.out
+
+setp lcec.0.x-axis-drive.enc-0-pos-scale [JOINT_0]SCALE
+net x-pos-fb <= lcec.0.x-axis-drive.enc-0-pos
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 # Y-Axis 
@@ -76,7 +84,6 @@ net x-pos-fb <= lcec.0.x-axis-encoder.enc-pos
 setp y-pid.Pgain [JOINT_1]P
 setp y-pid.Igain [JOINT_1]I
 setp y-pid.Dgain [JOINT_1]D
-setp y-pid.FF0 [JOINT_1]FF0
 setp y-pid.FF1 [JOINT_1]FF1
 setp y-pid.FF2 [JOINT_1]FF2
 setp y-pid.deadband [JOINT_1]DEADBAND
@@ -104,10 +111,16 @@ setp lcec.0.y-axis-drive.srv-0-scale [JOINT_1]SCALE
 net y-enable => lcec.0.y-axis-drive.srv-0-enable
 net y-amp-fault <= lcec.0.y-axis-drive.srv-0-error
 net y-vel-cmd => lcec.0.y-axis-drive.srv-0-cmd
-net y-neg-lim-in <= lcec.0.y-axis-drive.srv-0-din1
+#net y-neg-lim-in <= lcec.0.y-axis-drive.srv-0-din1
 
-setp lcec.0.y-axis-encoder.enc-pos-scale [JOINT_1]ENC_SCALE
-net y-pos-fb <= lcec.0.y-axis-encoder.enc-pos
+addf not.1 servo-thread
+net y-limit-raw <= lcec.0.y-axis-drive.srv-0-din1
+net y-limit-raw => not.1.in
+net y-neg-lim-in <= not.1.out
+
+
+setp lcec.0.y-axis-drive.enc-0-pos-scale [JOINT_1]SCALE
+net y-pos-fb <= lcec.0.y-axis-drive.enc-0-pos
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 # Z-Axis 
@@ -117,7 +130,6 @@ net y-pos-fb <= lcec.0.y-axis-encoder.enc-pos
 setp z-pid.Pgain [JOINT_2]P
 setp z-pid.Igain [JOINT_2]I
 setp z-pid.Dgain [JOINT_2]D
-setp z-pid.FF0 [JOINT_2]FF0
 setp z-pid.FF1 [JOINT_2]FF1
 setp z-pid.FF2 [JOINT_2]FF2
 setp z-pid.deadband [JOINT_2]DEADBAND
@@ -145,11 +157,16 @@ setp lcec.0.z-axis-drive.srv-0-scale [JOINT_2]SCALE
 net z-enable => lcec.0.z-axis-drive.srv-0-enable
 net z-amp-fault <= lcec.0.z-axis-drive.srv-0-error
 net z-vel-cmd => lcec.0.z-axis-drive.srv-0-cmd
-net z-pos-lim-in <= lcec.0.z-axis-drive.srv-0-din1
+#net z-pos-lim-in <= lcec.0.z-axis-drive.srv-0-din1
 
 # Z axis encoder
-setp lcec.0.z-axis-encoder.enc-pos-scale [JOINT_2]ENC_SCALE
+setp lcec.0.z-axis-encoder.enc-pos-scale [JOINT_2]SCALE
 net z-pos-fb <= lcec.0.z-axis-encoder.enc-pos
+
+addf not.2 servo-thread
+net z-limit-raw <= lcec.0.z-axis-drive.srv-0-din1
+net z-limit-raw => not.2.in
+net z-neg-lim-in <= not.2.out
 
 # Z axis brake
 net z-brake-release <= lcec.0.z-axis-drive.srv-0-ready
