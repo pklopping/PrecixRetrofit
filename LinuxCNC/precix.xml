@@ -1,15 +1,14 @@
 <masters>
 	<master idx="0" appTimePeriod="1000000" refClockSyncCycles="5">
 		<slave idx="0" type="EK1101"/>
-		<slave idx="1" type="EL1018" />
-		<slave idx="2" type="EL2008" />
+		<slave idx="1" type="EL1018" name="din-0" />
+		<slave idx="2" type="EL2008" name="dout-0" />
 		<slave idx="3" type="EL7342" name="x-axis-drive" />
-		<slave idx="4" type="EL5101" name="x-axis-encoder" />
-		<slave idx="5" type="EL7342" name="y-axis-drive" />
-		<slave idx="6" type="EL5101" name="y-axis-encoder"  />
-		<slave idx="7" type="EL7342" name="z-axis-drive" />
-		<slave idx="8" type="EL5101" name="z-axis-encoder"  />
-		<slave idx="9" type="EL4002" />
-		<slave idx="10" type="EL1094" />
+		<slave idx="4" type="EL7342" name="y-axis-drive" />
+		<slave idx="5" type="EL7342" name="z-axis-drive" />
+		<slave idx="6" type="EL4002" name="aout-0" />
+		<slave idx="7" type="EL1094" name="din-ns-0" />
+		<slave idx="8" type="EL9505" />
+		<slave idx="9" type="EL9505" />
 	</master>
 </masters>

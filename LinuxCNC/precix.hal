@@ -67,11 +67,7 @@ setp lcec.0.x-axis-drive.srv-0-scale [JOINT_0]SCALE
 net x-enable => lcec.0.x-axis-drive.srv-0-enable
 net x-amp-fault <= lcec.0.x-axis-drive.srv-0-error
 net x-vel-cmd => lcec.0.x-axis-drive.srv-0-cmd
-
-addf not.0 servo-thread
-net x-limit-raw <= lcec.0.x-axis-drive.srv-0-din1
-net x-limit-raw => not.0.in
-net x-neg-lim-in <= not.0.out
+net x-neg-lim-in <= lcec.0.x-axis-drive.srv-0-din2
 
 setp lcec.0.x-axis-drive.enc-0-pos-scale [JOINT_0]SCALE
 net x-pos-fb <= lcec.0.x-axis-drive.enc-0-pos
@@ -111,13 +107,7 @@ setp lcec.0.y-axis-drive.srv-0-scale [JOINT_1]SCALE
 net y-enable => lcec.0.y-axis-drive.srv-0-enable
 net y-amp-fault <= lcec.0.y-axis-drive.srv-0-error
 net y-vel-cmd => lcec.0.y-axis-drive.srv-0-cmd
-#net y-neg-lim-in <= lcec.0.y-axis-drive.srv-0-din1
-
-addf not.1 servo-thread
-net y-limit-raw <= lcec.0.y-axis-drive.srv-0-din1
-net y-limit-raw => not.1.in
-net y-neg-lim-in <= not.1.out
-
+net y-neg-lim-in <= lcec.0.y-axis-drive.srv-0-din2
 
 setp lcec.0.y-axis-drive.enc-0-pos-scale [JOINT_1]SCALE
 net y-pos-fb <= lcec.0.y-axis-drive.enc-0-pos
@@ -157,11 +147,11 @@ setp lcec.0.z-axis-drive.srv-0-scale [JOINT_2]SCALE
 net z-enable => lcec.0.z-axis-drive.srv-0-enable
 net z-amp-fault <= lcec.0.z-axis-drive.srv-0-error
 net z-vel-cmd => lcec.0.z-axis-drive.srv-0-cmd
-#net z-pos-lim-in <= lcec.0.z-axis-drive.srv-0-din1
+net z-pos-lim-in <= lcec.0.z-axis-drive.srv-0-din2
 
 # Z axis encoder
-setp lcec.0.z-axis-encoder.enc-pos-scale [JOINT_2]SCALE
-net z-pos-fb <= lcec.0.z-axis-encoder.enc-pos
+setp lcec.0.z-axis-drive.enc-0-pos-scale [JOINT_2]SCALE
+net z-pos-fb <= lcec.0.z-axis-drive.enc-0-pos
 
 addf not.2 servo-thread
 net z-limit-raw <= lcec.0.z-axis-drive.srv-0-din1
@@ -170,13 +160,13 @@ net z-neg-lim-in <= not.2.out
 
 # Z axis brake
 net z-brake-release <= lcec.0.z-axis-drive.srv-0-ready
-net z-brake-release => lcec.0.2.dout-2
+net z-brake-release => lcec.0.dout-0.dout-2
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 # E-Stop
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 # Estop simulation connections
-net estop-ext	<= lcec.0.1.din-2
+net estop-ext	<= lcec.0.din-0.din-2
 net estop-out	<= iocontrol.0.user-enable-out
 net estop-ext	=> iocontrol.0.emc-enable-in
 
@@ -187,20 +177,20 @@ net estop-ext	=> iocontrol.0.emc-enable-in
 loadrt logic names=problem_flags personality=0x206
 addf problem_flags servo-thread
 # X-Axis
-net x-axis-power-good <= lcec.0.10.din-2-not
+net x-axis-power-good <= lcec.0.din-ns-0.din-2-not
 net x-axis-power-good => problem_flags.in-00
 net x-amp-fault => problem_flags.in-01
 # Y-Axis
-net y-axis-power-good <= lcec.0.10.din-1-not
+net y-axis-power-good <= lcec.0.din-ns-0.din-1-not
 net y-axis-power-good => problem_flags.in-02
 net y-amp-fault => problem_flags.in-03
 # Z-Axis
-net z-axis-power-good <= lcec.0.10.din-3-not
+net z-axis-power-good <= lcec.0.din-ns-0.din-3-not
 net z-axis-power-good => problem_flags.in-04
 net z-amp-fault => problem_flags.in-05
 # Problem Output
 net problem_out <= problem_flags.or
-net problem_out => lcec.0.2.dout-3
+net problem_out => lcec.0.dout-0.dout-3
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Spindle Control
@@ -209,8 +199,8 @@ loadrt scale count=1
 addf scale.0 servo-thread
 setp scale.0.gain 0.000055555555
 net spindle-speed-scale spindle.0.speed-out => scale.0.in
-net spindle-speed-DAC scale.0.out => lcec.0.9.aout-0-value
-net spindle-on halui.spindle.0.is-on => lcec.0.9.aout-0-enable
+net spindle-speed-DAC scale.0.out => lcec.0.aout-0.aout-0-value
+net spindle-on halui.spindle.0.is-on => lcec.0.aout-0.aout-0-enable
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Tool Changer fake-out?
