@@ -67,8 +67,14 @@ setp lcec.0.x-axis-drive.srv-0-scale [JOINT_0]SCALE
 net x-enable => lcec.0.x-axis-drive.srv-0-enable
 net x-amp-fault <= lcec.0.x-axis-drive.srv-0-error
 net x-vel-cmd => lcec.0.x-axis-drive.srv-0-cmd
-net x-neg-lim-in <= lcec.0.x-axis-drive.srv-0-din2
 
+# X Home Switch
+addf not.0 servo-thread
+net x-home-sw-raw <= lcec.0.din-0.din-3
+net x-home-sw-raw => not.0.in
+net x-home-sw <= not.0.out
+
+# X Encoder
 setp lcec.0.x-axis-drive.enc-0-pos-scale [JOINT_0]SCALE
 net x-pos-fb <= lcec.0.x-axis-drive.enc-0-pos
 
@@ -107,10 +113,16 @@ setp lcec.0.y-axis-drive.srv-0-scale [JOINT_1]SCALE
 net y-enable => lcec.0.y-axis-drive.srv-0-enable
 net y-amp-fault <= lcec.0.y-axis-drive.srv-0-error
 net y-vel-cmd => lcec.0.y-axis-drive.srv-0-cmd
-net y-neg-lim-in <= lcec.0.y-axis-drive.srv-0-din2
 
+# Y Encoder
 setp lcec.0.y-axis-drive.enc-0-pos-scale [JOINT_1]SCALE
 net y-pos-fb <= lcec.0.y-axis-drive.enc-0-pos
+
+# Y Home Switch
+addf not.1 servo-thread
+net y-home-sw-raw <= lcec.0.din-0.din-4
+net y-home-sw-raw => not.1.in
+net y-home-sw <= not.1.out
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 # Z-Axis 
@@ -153,8 +165,9 @@ net z-pos-lim-in <= lcec.0.z-axis-drive.srv-0-din2
 setp lcec.0.z-axis-drive.enc-0-pos-scale [JOINT_2]SCALE
 net z-pos-fb <= lcec.0.z-axis-drive.enc-0-pos
 
+# Z Home Switch
 addf not.2 servo-thread
-net z-limit-raw <= lcec.0.z-axis-drive.srv-0-din1
+net z-limit-raw <= lcec.0.din-0.din-5
 net z-limit-raw => not.2.in
 net z-neg-lim-in <= not.2.out
 
@@ -201,6 +214,7 @@ setp scale.0.gain 0.000055555555
 net spindle-speed-scale spindle.0.speed-out => scale.0.in
 net spindle-speed-DAC scale.0.out => lcec.0.aout-0.aout-0-value
 net spindle-on halui.spindle.0.is-on => lcec.0.aout-0.aout-0-enable
+net spindle-forward spindle.0.forward => lcec.0.dout-0.dout-0
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Tool Changer fake-out?
