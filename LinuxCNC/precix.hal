@@ -52,14 +52,21 @@ net x-pos-fb => x-pid.feedback
 net x-pos-fb => joint.0.motor-pos-fb
 net x-vel-cmd <= x-pid.output
 
+# X Home Switch
+addf not.0 servo-thread
+net x-home-sw-raw <= lcec.0.din-0.din-3
+net x-home-sw-raw => not.0.in
+net x-home-sw <= not.0.out
+net x-home-sw => joint.0.home-sw-in
+
 # X axis interface
 net x-enable <= joint.0.amp-enable-out
 net x-amp-fault => joint.0.amp-fault-in
 net x-pos-cmd <= joint.0.motor-pos-cmd
 net x-homed <= joint.0.homed
 net x-homing <= joint.0.homing
-net x-neg-lim-in => joint.0.neg-lim-sw-in
-net x-pos-lim-in => joint.0.pos-lim-sw-in
+net x-home-sw => joint.0.neg-lim-sw-in
+net x-home-sw => joint.0.pos-lim-sw-in
 
 # X axis hardware connections
 setp lcec.0.x-axis-drive.srv-0-scale [JOINT_0]SCALE
@@ -67,12 +74,6 @@ net x-enable => lcec.0.x-axis-drive.srv-0-enable
 net x-amp-fault <= lcec.0.x-axis-drive.srv-0-error
 net x-vel-cmd => lcec.0.x-axis-drive.srv-0-cmd
 
-# X Home Switch
-addf not.0 servo-thread
-net x-home-sw-raw <= lcec.0.din-0.din-3
-net x-home-sw-raw => not.0.in
-net x-home-sw <= not.0.out
-net x-home-sw => joint.0.home-sw-in
 
 
 # X Encoder
@@ -99,14 +100,23 @@ net y-pos-fb => y-pid.feedback
 net y-pos-fb => joint.1.motor-pos-fb
 net y-vel-cmd <= y-pid.output
 
+# Y Home Switch
+addf not.1 servo-thread
+net y-home-sw-raw <= lcec.0.din-0.din-4
+net y-home-sw-raw => not.1.in
+net y-home-sw <= not.1.out
+net y-home-sw => joint.1.home-sw-in
+
 # Y axis interface
 net y-enable <= joint.1.amp-enable-out
 net y-amp-fault => joint.1.amp-fault-in
 net y-pos-cmd <= joint.1.motor-pos-cmd
 net y-homed <= joint.1.homed
 net y-homing <= joint.1.homing
-net y-neg-lim-in => joint.1.neg-lim-sw-in
-net y-pos-lim-in => joint.1.pos-lim-sw-in
+
+# Y-Limits
+net y-home-sw => joint.1.neg-lim-sw-in
+net y-home-sw => joint.1.pos-lim-sw-in
 
 # Y axis hardware connections
 setp lcec.0.y-axis-drive.srv-0-scale [JOINT_1]SCALE
@@ -117,13 +127,6 @@ net y-vel-cmd => lcec.0.y-axis-drive.srv-0-cmd
 # Y Encoder
 setp lcec.0.y-axis-drive.enc-0-pos-scale [JOINT_1]SCALE
 net y-pos-fb <= lcec.0.y-axis-drive.enc-0-pos
-
-# Y Home Switch
-addf not.1 servo-thread
-net y-home-sw-raw <= lcec.0.din-0.din-4
-net y-home-sw-raw => not.1.in
-net y-home-sw <= not.1.out
-net y-home-sw => joint.1.home-sw-in
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 # Z-Axis 
@@ -145,32 +148,32 @@ net z-pos-fb => z-pid.feedback
 net z-pos-fb => joint.2.motor-pos-fb
 net z-vel-cmd <= z-pid.output
 
-# Z axis interface
-net z-enable <= joint.2.amp-enable-out
-net z-amp-fault => joint.2.amp-fault-in
-net z-pos-cmd <= joint.2.motor-pos-cmd
-net z-homed <= joint.2.homed
-net z-homing <= joint.2.homing
-net z-neg-lim-in => joint.2.neg-lim-sw-in
-net z-pos-lim-in => joint.2.pos-lim-sw-in
-
-# Z axis hardware connections
-setp lcec.0.z-axis-drive.srv-0-scale [JOINT_2]SCALE
-net z-enable => lcec.0.z-axis-drive.srv-0-enable
-net z-amp-fault <= lcec.0.z-axis-drive.srv-0-error
-net z-vel-cmd => lcec.0.z-axis-drive.srv-0-cmd
-net z-pos-lim-in <= lcec.0.z-axis-drive.srv-0-din2
-
-# Z axis encoder
-setp lcec.0.z-axis-drive.enc-0-pos-scale [JOINT_2]SCALE
-net z-pos-fb <= lcec.0.z-axis-drive.enc-0-pos
-
 # Z Home Switch
 addf not.2 servo-thread
 net z-home-sw-raw <= lcec.0.din-0.din-5
 net z-home-sw-raw => not.2.in
 net z-home-sw <= not.2.out
 net z-home-sw => joint.2.home-sw-in
+
+# Z axis interface
+net z-enable <= joint.2.amp-enable-out
+net z-amp-fault => joint.2.amp-fault-in
+net z-pos-cmd <= joint.2.motor-pos-cmd
+net z-homed <= joint.2.homed
+net z-homing <= joint.2.homing
+net z-home-sw => joint.2.neg-lim-sw-in
+net z-home-sw => joint.2.pos-lim-sw-in
+
+# Z axis hardware connections
+setp lcec.0.z-axis-drive.srv-0-scale [JOINT_2]SCALE
+net z-enable => lcec.0.z-axis-drive.srv-0-enable
+net z-amp-fault <= lcec.0.z-axis-drive.srv-0-error
+net z-vel-cmd => lcec.0.z-axis-drive.srv-0-cmd
+
+# Z axis encoder
+setp lcec.0.z-axis-drive.enc-0-pos-scale [JOINT_2]SCALE
+net z-pos-fb <= lcec.0.z-axis-drive.enc-0-pos
+
 
 
 # Z axis brake
