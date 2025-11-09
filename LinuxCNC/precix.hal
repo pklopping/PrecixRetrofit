@@ -74,8 +74,6 @@ net x-enable => lcec.0.x-axis-drive.srv-0-enable
 net x-amp-fault <= lcec.0.x-axis-drive.srv-0-error
 net x-vel-cmd => lcec.0.x-axis-drive.srv-0-cmd
 
-
-
 # X Encoder
 setp lcec.0.x-axis-drive.enc-0-pos-scale [JOINT_0]SCALE
 net x-pos-fb <= lcec.0.x-axis-drive.enc-0-pos
@@ -161,8 +159,7 @@ net z-amp-fault => joint.2.amp-fault-in
 net z-pos-cmd <= joint.2.motor-pos-cmd
 net z-homed <= joint.2.homed
 net z-homing <= joint.2.homing
-net z-home-sw => joint.2.neg-lim-sw-in
-net z-home-sw => joint.2.pos-lim-sw-in
+#net z-home-sw => joint.2.pos-lim-sw-in
 
 # Z axis hardware connections
 setp lcec.0.z-axis-drive.srv-0-scale [JOINT_2]SCALE
@@ -173,8 +170,6 @@ net z-vel-cmd => lcec.0.z-axis-drive.srv-0-cmd
 # Z axis encoder
 setp lcec.0.z-axis-drive.enc-0-pos-scale [JOINT_2]SCALE
 net z-pos-fb <= lcec.0.z-axis-drive.enc-0-pos
-
-
 
 # Z axis brake
 net z-brake-release <= lcec.0.z-axis-drive.srv-0-ready
