@@ -8,7 +8,7 @@ This repo contains LinuxCNC configurations and electrical schematics for a Preci
 
 The author decided to build a drop-in replacement controller using modern hardware and software. They chose to use Beckhoff EtherCAT modules for the servo controllers and IO, and LinuxCNC for the controlling software. What resulted was the build below. The physical interface is a 1:1 plug-for-plug match with the original controller.
 
-## Complaints Address
+## Complaints Addressed
 
 The following are all of the complaints about the original Precix controller that have been, or can now be addressed
 
