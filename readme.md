@@ -8,6 +8,21 @@ This repo contains LinuxCNC configurations and electrical schematics for a Preci
 
 The author decided to build a drop-in replacement controller using modern hardware and software. They chose to use Beckhoff EtherCAT modules for the servo controllers and IO, and LinuxCNC for the controlling software. What resulted was the build below. The physical interface is a 1:1 plug-for-plug match with the original controller.
 
+## Complains Address
+
+The following are all of the complaints about the original Precix controller that have been, or can now be addressed
+
+* No internet access :white_check_mark:
+  * Users couldn't browse the internet, download files, or do research on the computer
+* Limited g-code size per transfer :white_check_mark:
+  * By using a modern version of linux users can use full-size flash drives, or download large files from the internet
+* No helical moves :white_check_mark:
+  * Users no longer need to configure their Fusion post processor to avoid helical moves, this dramatically reduces file sizes
+* Poor toolpath visualizations :white_check_mark:
+  * The Precix software only provides a top-down view of the toolpaths with no depth. LinuxCNC will render an interactive 3D view of the toolpaths
+* No tool probe :soon:
+  * An electrical port on the spindle mount is now wired to enable a removable probe, but this needs to be designed, manufactured, and programmed before use
+
 ## What's in the repo
 
 This repo contains two main folders
