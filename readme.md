@@ -18,6 +18,8 @@ The following are all of the complaints about the original Precix controller tha
   * By using a modern version of linux users can use full-size flash drives, or download large files from the internet
 * No helical moves :white_check_mark:
   * Users no longer need to configure their Fusion post processor to avoid helical moves, this dramatically reduces file sizes
+* No drill macros :white_check_mark:
+  * The Precix controller doesn't understand drill macros and can easily scrap parts if you try to use one
 * Poor toolpath visualizations :white_check_mark:
   * The Precix software only provides a top-down view of the toolpaths with no depth. LinuxCNC will render an interactive 3D view of the toolpaths
 * No tool probe :soon:
