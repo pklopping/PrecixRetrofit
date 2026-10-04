@@ -22,6 +22,10 @@ The following are all of the complaints about the original Precix controller tha
   * The Precix controller doesn't understand drill macros and can easily scrap parts if you try to use one
 * Poor toolpath visualizations :white_check_mark:
   * The Precix software only provides a top-down view of the toolpaths with no depth. LinuxCNC will render an interactive 3D view of the toolpaths
+* Imprecise jogging :white_checK_mark:
+  * The Precix software doesn't let you jog axes in specific increments. LinuxCNC lets you jog in precise steps
+* No Keyboard Control :white_checK_mark:
+  * The Precix software requires the use of a mouse to jog the machine. LinuxCNC enables jogging via the wireless keyboard
 * No tool probe :soon:
   * An electrical port on the spindle mount is now wired to enable a removable probe, but this needs to be designed, manufactured, and programmed before use
 
