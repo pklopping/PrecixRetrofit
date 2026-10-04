@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pyvcp>
+  <label>
+    <text>"Commanded RPM:"</text>
+  </label>
+  <number>
+    <halpin>"spindle-speed-comm"</halpin>
+    <format>"4.0f"</format>
+  </number>
+</pyvcp>

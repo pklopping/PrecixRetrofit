@@ -1,0 +1,2 @@
+# This runs AFTER the Axis GUI loads, meaning the pyvcp pins now safely exist
+net spindle-speed-comm <= spindle.0.speed-out-abs => pyvcp.spindle-speed-comm
