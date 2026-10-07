@@ -12,6 +12,8 @@ The author decided to build a drop-in replacement controller using modern hardwa
 
 The following are all of the complaints about the original Precix controller that have been, or can now be addressed
 
+* Unsafe E-Stop Behavior :white_check_mark:
+  * The Precix requires a specific e-stop recovery or else it can move violently. LinuxCNC doesn't have this issue.
 * No internet access :white_check_mark:
   * Users couldn't browse the internet, download files, or do research on the computer
 * Limited g-code size per transfer :white_check_mark:
