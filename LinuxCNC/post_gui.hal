@@ -1,2 +1,6 @@
-# This runs AFTER the Axis GUI loads, meaning the pyvcp pins now safely exist
-net spindle-speed-comm <= spindle.0.speed-out-abs => pyvcp.spindle-speed-comm
+# display the rpm based on freq * rpm per hz
+# net speed_out pyvcp.spindle_rpm <= spindle-speed-scale
+net spindle-speed-scale => pyvcp.spindle_rpm
+
+# run led
+net gs2-run => pyvcp.on-led
