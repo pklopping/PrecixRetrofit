@@ -3,4 +3,9 @@
 net spindle-speed-scale => pyvcp.spindle_rpm
 
 # run led
-net gs2-run => pyvcp.on-led
+net gs2-run => pyvcp.spindle-on-led
+
+# Spindle Override Reset
+net reset-feed-override halui.feed-override.reset <= pyvcp.feed-override-100
+net reset-spindle-override halui.spindle.0.override.reset <= pyvcp.spindle-override-100
+net reset-rapid-override halui.rapid-override.reset <= pyvcp.rapid-override-100

@@ -2,8 +2,7 @@
 
   <!-- the RPM meter -->
   <hbox>
-    <relief>RAISED</relief>
-    <bd>3</bd>
+    <relief>FLAT</relief>
     <meter>
       <halpin>"spindle_rpm"</halpin>
       <text>"Spindle"</text>
@@ -14,33 +13,36 @@
       <majorscale>3000</majorscale>
       <minorscale>1000</minorscale>
       <region1>0,1000,"yellow"</region1>
-      <region2>16000,18000,"orange"</region2>
     </meter>
   </hbox>
 
   <!-- the On Led -->
   <hbox>
-    <relief>RAISED</relief>
-    <bd>3</bd>
-    <vbox>
-      <relief>RAISED</relief>
-      <bd>2</bd>
-      <label>
-        <text>"On"</text>
-        <font>("Helvetica",18)</font>
-        <width>5</width>
-      </label>
-      <hbox>
-        <label width="2"/> <!-- used to center the led -->
-        <rectled>
-          <halpin>"on-led"</halpin>
-          <height>"30"</height>
-          <width>"30"</width>
-          <on_color>"green"</on_color>
-          <off_color>"red"</off_color>
-        </rectled>
-      </hbox>
-    </vbox>
-
+    <relief>FLAT</relief>
+    <label>
+      <text>"Spindle Active: "</text>
+      <font>("Helvetica",18)</font>
+    </label>
+    <rectled>
+      <halpin>"spindle-on-led"</halpin>
+      <height>"20"</height>
+      <width>"20"</width>
+      <on_color>"green"</on_color>
+      <off_color>"red"</off_color>
+    </rectled>
   </hbox>
+  <vbox>
+    <button>
+      <halpin>"feed-override-100"</halpin>
+      <text>"Feed Override 100%"</text>
+    </button>
+    <button>
+      <halpin>"rapid-override-100"</halpin>
+      <text>"Rapid Override 100%"</text>
+    </button>
+    <button>
+      <halpin>"spindle-override-100"</halpin>
+      <text>"Spindle Override 100%"</text>
+    </button>
+  </vbox>
 </pyvcp>
