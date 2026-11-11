@@ -30,7 +30,16 @@ addf lcec.write-all servo-thread
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 # Nots for limit switches
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-loadrt not count=3
+# not.0-2 = X/Y/Z switch inversion, not.3-4 = X/Y "not homed" for limit gating
+loadrt not count=5
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Limit gating: hard limits are only active until the joint is homed.
+# After homing, soft limits (MIN_LIMIT/MAX_LIMIT) protect travel and the shared
+# home/limit switch is ignored as a limit. During homing, HOME_IGNORE_LIMITS applies.
+# and2.0 = X, and2.1 = Y
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+loadrt and2 count=2
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 # X-Axis 
@@ -65,8 +74,17 @@ net x-amp-fault => joint.0.amp-fault-in
 net x-pos-cmd <= joint.0.motor-pos-cmd
 net x-homed <= joint.0.homed
 net x-homing <= joint.0.homing
-net x-home-sw => joint.0.neg-lim-sw-in
-net x-home-sw => joint.0.pos-lim-sw-in
+
+# X-Limits (only active while not homed)
+addf not.3 servo-thread
+addf and2.0 servo-thread
+net x-homed => not.3.in
+net x-not-homed <= not.3.out
+net x-home-sw => and2.0.in0
+net x-not-homed => and2.0.in1
+net x-lim-sw <= and2.0.out
+net x-lim-sw => joint.0.neg-lim-sw-in
+net x-lim-sw => joint.0.pos-lim-sw-in
 
 # X axis hardware connections
 setp lcec.0.x-axis-drive.srv-0-scale [JOINT_0]SCALE
@@ -112,9 +130,16 @@ net y-pos-cmd <= joint.1.motor-pos-cmd
 net y-homed <= joint.1.homed
 net y-homing <= joint.1.homing
 
-# Y-Limits
-net y-home-sw => joint.1.neg-lim-sw-in
-net y-home-sw => joint.1.pos-lim-sw-in
+# Y-Limits (only active while not homed)
+addf not.4 servo-thread
+addf and2.1 servo-thread
+net y-homed => not.4.in
+net y-not-homed <= not.4.out
+net y-home-sw => and2.1.in0
+net y-not-homed => and2.1.in1
+net y-lim-sw <= and2.1.out
+net y-lim-sw => joint.1.neg-lim-sw-in
+net y-lim-sw => joint.1.pos-lim-sw-in
 
 # Y axis hardware connections
 setp lcec.0.y-axis-drive.srv-0-scale [JOINT_1]SCALE
