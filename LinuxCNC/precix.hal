@@ -32,18 +32,6 @@ addf lcec.write-all servo-thread
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 loadrt not count=3
 
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-# Debounce for home/limit switches
-# The EL1018 only has a 10us input filter, so electrical noise (e.g. during heavy
-# cuts) can show up as false limit trips. debounce is an integrator: the output only
-# changes after the input has been consistently in the new state, so isolated spikes
-# are rejected. delay is in servo cycles (SERVO_PERIOD = 1ms -> 10 = ~10ms).
-# Channels: 0 = X, 1 = Y, 2 = Z
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-loadrt debounce cfg=3
-addf debounce.0 servo-thread
-setp debounce.0.delay 10
-
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 # X-Axis 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -67,9 +55,7 @@ net x-vel-cmd <= x-pid.output
 # X Home Switch
 addf not.0 servo-thread
 net x-home-sw-raw <= lcec.0.din-0.din-3
-net x-home-sw-raw => debounce.0.0.in
-net x-home-sw-db <= debounce.0.0.out
-net x-home-sw-db => not.0.in
+net x-home-sw-raw => not.0.in
 net x-home-sw <= not.0.out
 net x-home-sw => joint.0.home-sw-in
 
@@ -115,9 +101,7 @@ net y-vel-cmd <= y-pid.output
 # Y Home Switch
 addf not.1 servo-thread
 net y-home-sw-raw <= lcec.0.din-0.din-4
-net y-home-sw-raw => debounce.0.1.in
-net y-home-sw-db <= debounce.0.1.out
-net y-home-sw-db => not.1.in
+net y-home-sw-raw => not.1.in
 net y-home-sw <= not.1.out
 net y-home-sw => joint.1.home-sw-in
 
@@ -165,9 +149,7 @@ net z-vel-cmd <= z-pid.output
 # Z Home Switch
 addf not.2 servo-thread
 net z-home-sw-raw <= lcec.0.din-0.din-5
-net z-home-sw-raw => debounce.0.2.in
-net z-home-sw-db <= debounce.0.2.out
-net z-home-sw-db => not.2.in
+net z-home-sw-raw => not.2.in
 net z-home-sw <= not.2.out
 net z-home-sw => joint.2.home-sw-in
 
